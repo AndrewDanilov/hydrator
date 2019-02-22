@@ -25,7 +25,40 @@ to the require section of your `composer.json` file.
 Usage
 -----
 
-Once the extension is installed, simply use it in your code by  :
+Filling data array from object attributes:
 
 ```php
-<?= \andrewdanilov\hydrator\AutoloadExample::widget(); ?>```
+$object = new ExampleObject();
+
+$hydrator = new \andrewdanilov\hydrator\Hydrator();
+
+$data = $hydrator->extract($object, ['id', 'name']);
+```
+
+Filling object with data:
+
+```php
+$data = [
+	'id' => $id,
+	'name' => $name,
+];
+
+$hydrator = new \andrewdanilov\hydrator\Hydrator();
+
+$object = $hydrator->hydrate(ExampleObject::class, $data);
+```
+
+Filling existing object with data:
+
+```php
+$object = new ExampleObject();
+
+$data = [
+	'id' => $id,
+	'name' => $name,
+];
+
+$hydrator = new \andrewdanilov\hydrator\Hydrator();
+
+$object = $hydrator->hydrateInto($object, $data);
+```
