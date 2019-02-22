@@ -38,7 +38,7 @@ class Hydrator
 			if (!$reflection->hasProperty($propertyName)) {
 				throw new \InvalidArgumentException("There's no $propertyName property in $className.");
 			}
-			$property = $reflection->getProperty($propertyValue);
+			$property = $reflection->getProperty($propertyName);
 			$property->setAccessible(true);
 			$property->setValue($object, $propertyValue);
 		}
