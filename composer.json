@@ -1,0 +1,21 @@
+{
+    "name": "andrewdanilov/hydrator",
+    "description": "Class for fill private object attributes from array, and extract data from object",
+    "type": "library",
+    "keywords": ["php","hydrator"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "AndrewDanilov",
+            "email": "andrewdanilov@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "andrewdanilov\\hydrator\\": ""
+        }
+    }
+}
