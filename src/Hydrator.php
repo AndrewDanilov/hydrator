@@ -63,7 +63,7 @@ class Hydrator
 			}
 			$property = $reflection->getProperty($propertyName);
 			$property->setAccessible(true);
-			$property->setValue($object, $propertyValue;
+			$property->setValue($object, $propertyValue);
 		}
 		return $object;
 	}
