@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist andrewdanilov/hydrator "*"
+composer require andrewdanilov/hydrator "dev-master"
 ```
 
 or add
 
 ```
-"andrewdanilov/hydrator": "*"
+"andrewdanilov/hydrator": "dev-master"
 ```
 
 to the require section of your `composer.json` file.
